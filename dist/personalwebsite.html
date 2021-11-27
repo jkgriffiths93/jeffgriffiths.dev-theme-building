@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;700&family=Tinos&display=swap">
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Jeff Griffiths</title>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Navbar ------------------------------------- -->
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="index.html">
+          <i class="fas fa-project-diagram text-logo"></i> Jeff Griffiths
+        </a>
+      </h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="professionalresume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+    <!-- -------------------------------------------- -->
+    <div class="content-container personal-website-description">
+      <div class="section-light">
+        <div class="section-container grid">
+          <h1 class="large text-primary">jeffgriffiths.dev</h1>
+          <p class="lead">Nov 2021: created this website as a means of practicing as I learn Web Development; it also stands a an interactive CV and portfolio</p>
+        </div>
+      </div>
+      <div class="section-dark">
+        <div class="section-container grid">
+          <h1 class="large text-primary">Skills</h1>
+          <ul class="text-light">
+            <li>
+              <a href="https://www.mongodb.com" class="small text-light">MongoDB</a>
+              <ul>
+                <li class="x-small text-white">My MongoDB database is hosted on Atlas</li>
+                <li class="x-small text-white">There are three collections used for 1. Blog Posts 2. Project Cards on Landing Page and 3. Sudoku puzzles and answers</li>
+                <li class="x-small text-white">I recognize these are simple use cases, and the data in each collection won't change regularly-- to simplify, I might save data as static JSON files in the future that my server can serve directly</li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://expressjs.com" class="small text-light">Express</a>
+              <ul>
+                <li class="x-small text-white">Framework for setting up the server, routing, APIs, etc.</li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://reactjs.org" class="small text-light">React</a>
+              <ul>
+                <li class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa odio alias distinctio aliquid ea dolor veritatis accusantium ullam, tempora sed eos quis. Ab atque expedita nisi. Placeat, laborum hic.</li>
+                <li class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa odio alias distinctio aliquid ea dolor veritatis accusantium ullam, tempora sed eos quis. Ab atque expedita nisi. Placeat, laborum hic.</li>
+                <li class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa odio alias distinctio aliquid ea dolor veritatis accusantium ullam, tempora sed eos quis. Ab atque expedita nisi. Placeat, laborum hic.</li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://nodejs.org/en/" class="small text-light">Node</a>
+              <ul>
+                <li class="x-small text-white">Used to build both the backend and frontend</li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://sass-lang.com" class="small text-light">Sass</a>
+              <ul>
+                <li class="x-small text-white">Used while theme building and then implemented as a compiled CSS</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!" class="small text-light">Skills Not Used</a>
+              <ul>
+                <li class="x-small text-white"><b>Redux</b>: no authentication or global state needed, so opted to just use useState for each individual page instead</li>
+                <li class="x-small text-white"><b>JWT Authentication</b>: no authentication needed for app, but have experience using JWT for authentication</li>
+                <li class="x-small text-white"><b>Bootstrap</b>: have used Bootstrap in the past but unless I'm creating a simple UI for complext backend, I opt to create Bootstrap like functionality using Sass and React</li>
+                <li class="x-small text-white"><b>EJS</b>: I've used EJS extensively in the past but now opt to use React</li>
+                <li class="x-small text-white"><b>Javascript/JQuery</b>: indirectly using Javascript through react, but have in the past built out event listeners and interacted with the DOM directly using Javascript</li>
+                <li class="x-small text-white"><b>SQL</b>: opted for NoSQL (MongoDB specifically) for scalability in future projects, but have extensive experience building and querying SQL tables from profession as a Corporate Finance Professional</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-container grid">
+          <h1 class="large text-primary">
+            Evolution
+          </h1>
+          <p class="lead">I built this website in three main iterations as I went through two Udemy courses: "The Complete Web Development Bootcamp" -Dr. Angela Yu and "MERN Stack Front to Back" -Brad Traversy.</p>
+          <p class="lead"><b>Iteration 1</b>: front end only-- static HTML, Bootstrap, with some functionality through Javascript/JQuery</p>
+          <p class="lead"><b>Iteration 2</b>: backend using Node and Exress with front end similar to first iteration, but rendered by an EJS engine</p>
+          <p class="lead"><b>Iteration 3</b>: MERN stack with a theme building exercise using plain HTML and Sass</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer ------------------------------------- -->
+    <footer class="footer bg-dark">
+      <a href="https://www.linkedin.com/in/jeff-griffiths-5794b6ab">
+        <span class="social-icon fab fa-linkedin fa-2x"></span>
+      </a>
+      <a href="https://github.com/jkgriffiths93">
+        <span class="social-icon fab fa-github-square fa-2x"></span>
+      </a>
+      <a href="mailto: jkgriffiths93@gmail.com">
+        <span class="social-icon fas fa-envelope fa-2x"></span>
+      </a>
+      <p class="text-copyright">© Copyright Jeff Griffiths 2021</p>
+    </footer>
+    <!-- -------------------------------------------- -->
+  </div>
+</body>
+</html>

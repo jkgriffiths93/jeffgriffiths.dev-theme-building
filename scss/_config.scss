@@ -1,0 +1,115 @@
+// ***** vvv Change these colors vv
+$primary-color: #d89216;
+$dark-color: #374045;
+$light-color: #e1d89f;
+// ****** ^^^
+$danger-color: #da0037;
+$success-color: #28a745;
+$white-color: #fff;
+$max-width: 1100px;
+$footer-height: 6rem;
+$nav-spacer: 5rem;
+$mobile-width: 700px;
+$large-width: 1440px;
+
+$sudoku-cell-font: 1.25rem;
+// $sudoku-cell-font: calc(2vh);
+$pencil-font-size: 0.3 * $sudoku-cell-font;
+// $pencil-font-size: 0.375rem;
+// $pencil-ratio: 0.3;
+
+$sudoku-table-width: calc(min(40vw, 65vh));
+$sudoku-cell-height: calc(min(40vw, 65vh) / 9);
+
+$sudoku-border-cell: 1px;
+$sudoku-border-box: 3px;
+$sudoku-border-outer: 3px;
+
+// Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// margin & Padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  // All around margin
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  // Vertical margin
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .myb-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+
+  // All around padding
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  // Vertical padding
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}
+
+// grid
+
+$gridamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+@each $grid in $gridamounts {
+  // default columns
+  .col-#{$grid} {
+    grid-column: auto/span #{$grid};
+  }
+
+  // rows
+  .row-#{$grid} {
+    grid-row: auto/span #{$grid};
+  }
+
+  @media (min-width: $large-width) {
+    // extra large columns
+    .col-xlg-#{$grid} {
+      grid-column: auto/span #{$grid};
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $large-width) {
+    // large columns
+    .col-lg-#{$grid} {
+      grid-column: auto/span #{$grid};
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    // small columns
+    .col-sm-#{$grid} {
+      grid-column: auto/span #{$grid};
+    }
+  }
+}
+
+$gridgaps: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+
+@each $gap in $gridgaps {
+  .grid-gap-#{$gap} {
+    gap: #{$gap}px;
+  }
+}

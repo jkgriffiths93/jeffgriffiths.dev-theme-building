@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;700&family=Tinos&display=swap">
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Jeff Griffiths</title>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Navbar ------------------------------------- -->
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="index.html">
+          <i class="fas fa-project-diagram text-logo"></i> Jeff Griffiths
+        </a>
+      </h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="professionalresume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+    <!-- -------------------------------------------- -->
+    <div class="content-container sudoku">
+      <div class="section-light">
+        <div class="section-container grid">
+          <h1 class="large text-primary">Sudoku</h1>
+        <p class="lead">Sep 2021: classic sudoku puzzle with various features and functionality</p>
+          <div class="col-lg-3 options-column">
+            <p class="my-1 medium">Options</p>
+            <button class="btn btn-white options-btn">Initial Input Mode</button>
+            <button class="btn btn-white options-btn">Error Warning</button>
+            <button class="btn btn-white options-btn">Highlight Selected #'s</button>
+            <button class="btn btn-white options-btn">Crosshairs</button>
+            <button class="btn btn-dark options-btn">Arrow Scroll Off</button>
+            <button class="btn btn-white options-btn">Auto-Remove Pencil</button>
+            <button class="btn btn-white options-btn">Rapid Fill</button>
+            <button class="btn btn-white options-btn">Initial Input Mode</button>
+            <div class="dual-btn-container">
+              <button class="btn btn-dark options-btn dual-btn">Pen</button>
+              <button class="btn btn-white options-btn dual-btn">Pencil</button>
+            </div>
+          </div>
+          <div class="col-lg-6 sudoku-column">
+            <div class="sudoku-outer-container">
+              <p class="my-1 medium">Sudoku!</p>
+              <div class="sudoku-inner-container">
+                <table class="sudoku-table">
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-dark" id="r1-c1"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r1-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r1-c3"></td>
+                    <td class="sudoku-cell sudoku-light" id="r1-c4">1</td>
+                    <td class="sudoku-cell sudoku-light" id="r1-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r1-c6"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r1-c7"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r1-c8"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r1-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-dark" id="r2-c1"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r2-c2">3</td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r2-c3"></td>
+                    <td class="sudoku-cell sudoku-light" id="r2-c4"></td>
+                    <td class="sudoku-cell sudoku-light" id="r2-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r2-c6"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r2-c7"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r2-c8"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r2-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c1">9</td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom sudoku-right" id="r3-c3"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r3-c4"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r3-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom sudoku-right" id="r3-c6"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c7"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c8"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-light" id="r4-c1"></td>
+                    <td class="sudoku-cell sudoku-light" id="r4-c2"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r4-c3"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r4-c4"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r4-c5"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r4-c6"></td>
+                    <td class="sudoku-cell sudoku-light" id="r4-c7"></td>
+                    <td class="sudoku-cell sudoku-light" id="r4-c8"></td>
+                    <td class="sudoku-cell sudoku-light" id="r4-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-light" id="r5-c1"></td>
+                    <td class="sudoku-cell sudoku-light" id="r5-c2"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r5-c3"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-initial-cell" id="r5-c4">8</td>
+                    <td class="sudoku-cell sudoku-dark" id="r5-c5"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r5-c6"></td>
+                    <td class="sudoku-cell sudoku-light" id="r5-c7"></td>
+                    <td class="sudoku-cell sudoku-light" id="r5-c8"></td>
+                    <td class="sudoku-cell sudoku-light" id="r5-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c1"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c2"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom sudoku-right" id="r6-c3"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r6-c4"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r6-c5"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom sudoku-right" id="r6-c6"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c7"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c8"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-dark" id="r7-c1"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r7-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r7-c3"></td>
+                    <td class="sudoku-cell sudoku-light" id="r7-c4"></td>
+                    <td class="sudoku-cell sudoku-light" id="r7-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r7-c6"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r7-c7"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r7-c8"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r7-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-dark" id="r8-c1"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-cell-selected" id="r8-c2">4</td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r8-c3"></td>
+                    <td class="sudoku-cell sudoku-light" id="r8-c4"></td>
+                    <td class="sudoku-cell sudoku-light" id="r8-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r8-c6"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r8-c7"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r8-c8">
+                      <table class="sudoku-pencil">
+                        <tr>
+                          <td class="num1">1</td>
+                          <td class="num2">2</td>
+                          <td class="num3">3</td>
+                        </tr>
+                        <tr>
+                          <td class="num4 sudoku-pencil-hide">4</td>
+                          <td class="num5 sudoku-pencil-hide">5</td>
+                          <td class="num6 sudoku-pencil-hide">6</td>
+                        </tr>
+                        <tr>
+                          <td class="num7">7</td>
+                          <td class="num8 sudoku-pencil-hide">8</td>
+                          <td class="num9">9</td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="sudoku-cell sudoku-dark" id="r8-c9"></td>
+                  <tr class="sudoku-table-row">
+                    <td class="sudoku-cell sudoku-dark" id="r9-c1"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r9-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r9-c3"></td>
+                    <td class="sudoku-cell sudoku-light" id="r9-c4"></td>
+                    <td class="sudoku-cell sudoku-light" id="r9-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right" id="r9-c6"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r9-c7"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r9-c8"></td>
+                    <td class="sudoku-cell sudoku-dark" id="r9-c9"></td>
+                </table>
+              </div>
+              <div class="bottom-number-div">
+                <table class="bottom-number-table">
+                  <tr>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-1">1</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-2">2</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-3">3</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number bottom-number-selected" id="bottom-number-4">4</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-5">5</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-6">6</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-7">7</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-8">8</div></td>
+                    <td class="bottom-number-container"><div class="bottom-number" id="bottom-number-9">9</div></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 gameplay-column">
+            <p class="my-1 medium">Gameplay</p>
+            <p>00:00:00</p>
+            <button class="btn btn-primary options-btn">Start Timer</button>
+            <button class="btn btn-primary options-btn">Reset Timer</button>
+            <div class="options-line-container"><hr class="options-line"></div>
+            <button class="btn btn-primary options-btn">Autofill Pencil</button>
+            <div class="options-line-container"><hr class="options-line"></div>
+            <button class="btn btn-danger options-btn">Reset Input</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- Footer ------------------------------------- -->
+    <footer class="footer bg-dark">
+      <a href="https://www.linkedin.com/in/jeff-griffiths-5794b6ab">
+        <span class="social-icon fab fa-linkedin fa-2x"></span>
+      </a>
+      <a href="https://github.com/jkgriffiths93">
+        <span class="social-icon fab fa-github-square fa-2x"></span>
+      </a>
+      <a href="mailto: jkgriffiths93@gmail.com">
+        <span class="social-icon fas fa-envelope fa-2x"></span>
+      </a>
+      <p class="text-copyright">© Copyright Jeff Griffiths 2021</p>
+    </footer>
+    <!-- -------------------------------------------- -->
+  </div>
+</body>
+</html>

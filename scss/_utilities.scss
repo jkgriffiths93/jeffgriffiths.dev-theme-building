@@ -1,0 +1,333 @@
+// Containers
+.page-container {
+  min-height: 100vh;
+  position: relative;
+
+  // min-height: 100vh;
+  // margin-top: $nav-spacer;
+}
+
+.content-container {
+  padding: $nav-spacer 0 ($footer-height + 1rem);
+  overflow: hidden;
+  // padding: 0 2rem $footer-height;
+  // margin-top: $nav-spacer;
+  // min-height: --calc(100vh - $nav-spacer * 3);
+  // position: relative;
+}
+
+.button-container {
+  text-align: center;
+}
+
+// Text Styles
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.medium {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.small {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.x-small {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-logo {
+  color: $light-color;
+}
+
+.text-copyright {
+  font-size: 0.75rem;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+.line {
+  height: 1px;
+  background: #ccc;
+  margin: 1.5rem 0;
+}
+
+// Text colors
+.text {
+  &-primary {
+    color: $primary-color;
+  }
+  &-light {
+    color: $light-color;
+  }
+  &-dark {
+    color: $dark-color;
+  }
+  &-success {
+    color: $success-color;
+  }
+  &-danger {
+    color: $danger-color;
+  }
+  &-white {
+    color: #fff;
+  }
+}
+
+// Backgrounds
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-light {
+    @include set-background($light-color);
+    border: #ccc 1px solid;
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+  &-white {
+    @include set-background(#fff);
+    border: #ccc 1px solid;
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background: $light-color;
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: all 0.1s ease-in;
+
+  &.btn-primary {
+    @include set-background($primary-color);
+    border: 1px $primary-color solid;
+    &:hover {
+      background: lighten($primary-color, 15%);
+      border: 1px lighten($primary-color, 15%) solid;
+    }
+  }
+  &.btn-dark {
+    @include set-background($dark-color);
+    border: 1px $dark-color solid;
+    &:hover {
+      background: lighten($dark-color, 15%);
+      border: 1px lighten($dark-color, 15%) solid;
+    }
+  }
+  &.btn-success {
+    @include set-background($success-color);
+    border: 1px $success-color solid;
+    &:hover {
+      background: lighten($success-color, 15%);
+      border: 1px lighten($success-color, 15%) solid;
+    }
+  }
+  &.btn-danger {
+    @include set-background($danger-color);
+    border: 1px $danger-color solid;
+    &:hover {
+      background: lighten($danger-color, 15%);
+    }
+  }
+  &.btn-white {
+    @include set-background(#fff);
+    border: 1px #333 solid;
+    &:hover {
+      background: darken(#fff, 20%);
+      color: #333;
+    }
+  }
+  &:hover {
+    background: lighten($dark-color, 20%);
+    color: #fff;
+  }
+}
+
+// Alerts
+.alert {
+  padding: 0.8rem;
+  // vvv this one might have issues, check it
+  margin: 1rem;
+  // ^^^ ************************************
+  opacity: 0.9;
+  background: $light-color;
+  color: #333;
+
+  &.alert-primary {
+    @include set-background($primary-color);
+  }
+  &.alert-dark {
+    @include set-background($dark-color);
+  }
+  &.alert-success {
+    @include set-background($success-color);
+  }
+  &.alert-danger {
+    @include set-background($danger-color);
+  }
+}
+
+// Drop down
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  @include set-background($dark-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+// ------
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: $light-color;
+  color: #333;
+
+  &.badge-primary {
+    @include set-background($primary-color);
+  }
+  &.badge-dark {
+    @include set-background($dark-color);
+  }
+  &.badge-success {
+    @include set-background($success-color);
+  }
+  &.badge-danger {
+    @include set-background($danger-color);
+  }
+}
+
+.dark-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: (0, 0, 0, 0.7);
+}
+
+.table {
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  th {
+    background: $light-color;
+  }
+}
+
+// sections
+.section-light {
+  background: #fff;
+}
+
+.section-dark {
+  background: $dark-color;
+  border-top: solid $primary-color 1px;
+  border-bottom: solid $primary-color 1px;
+
+  p {
+    color: #fff;
+  }
+
+  img {
+    color: #fff;
+  }
+}
+
+.section-container {
+  padding: 2em 2.5em;
+  // max-width: $max-width;
+}
+
+// CSS Art Container
+.art-container {
+  width: 100%;
+  height: 65vh;
+  margin: 1rem 0;
+}
+
+// grid
+.grid {
+  display: grid;
+  // gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  counter-reset: div;
+}
+
+.grid div {
+  text-align: center;
+}
+
+.grid div:before {
+  counter-increment: div;
+}
+
+.grid div[class]:after {
+  display: block;
+  text-align: center;
+}

@@ -1,0 +1,146 @@
+@media (max-width: $mobile-width) {
+  .hide-sm {
+    display: none;
+  }
+
+  // Text Styles
+  .x-large {
+    font-size: 3rem;
+  }
+
+  .large {
+    font-size: 2rem;
+  }
+
+  .medium {
+    font-size: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  // Navbar
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .home-page {
+    .title-image {
+      position: static;
+      transform: rotate(0);
+      width: 60%;
+    }
+
+    .learn-more-button {
+      // display: block;
+      width: 50%;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  // About page
+  .about-page {
+    img {
+      width: 50%;
+    }
+    .dark-title {
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+
+    .dark-description {
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+  }
+
+  // Blog landing page
+  .blog-landing-page {
+    img {
+      grid-row-start: 2;
+      grid-row-end: 2;
+      padding: 0.75rem;
+      max-width: 200px;
+    }
+
+    .blog-header-container {
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+
+    .blog-preview {
+      grid-row-start: 3;
+      grid-row-end: 3;
+    }
+  }
+
+  .blog-post-page {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0.25rem;
+    }
+
+    .lead {
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+
+    img {
+      padding: 1rem 0;
+      max-width: 250px;
+      float: none;
+      width: 80%;
+    }
+  }
+
+  // Resume page
+  .resume-page {
+    .resume-list-item {
+      text-align: left;
+    }
+  }
+
+  // Sudoku page
+  .sudoku {
+    table {
+      border-spacing: 0;
+    }
+    .sudoku-table {
+      width: calc(min(80vw, 70vh));
+      height: calc(min(80vw, 70vh));
+    }
+    .bottom-number-div {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    $sudoku-cell-font: 0.7rem;
+    $pencil-font-size: 0.35 * $sudoku-cell-font;
+
+    .sudoku-table {
+      font-size: $sudoku-cell-font;
+    }
+
+    // .sudoku-cell {
+    //   table {
+    //     border-spacing: 0;
+    //   }
+    // }
+
+    .sudoku-pencil {
+      font-size: $pencil-font-size;
+      // height: auto;
+    }
+  }
+}

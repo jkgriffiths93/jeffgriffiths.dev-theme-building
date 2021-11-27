@@ -1,0 +1,816 @@
+@import 'config';
+@import 'utilities';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  grid-column: auto/span 12;
+}
+
+body {
+  font-family: 'IBM Plex Sans Hebrew', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px $primary-color;
+  //   opacity: 0.9;
+
+  ul {
+    display: flex;
+  }
+
+  a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Footer
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  text-align: center;
+  border-top: solid 1px $primary-color;
+  padding: auto;
+
+  .social-icon {
+    margin: 20px 10px 5px;
+    color: $primary-color;
+  }
+
+  .social-icon:hover {
+    color: $light-color;
+  }
+}
+
+// Home page
+.home-page {
+  text-align: center;
+  padding: 6rem 0;
+
+  // .title-image-container {
+  //   position: absolute;
+  //   z-index: -1;
+  // }
+
+  .title-image {
+    border-radius: 5px;
+    transform: rotate(15deg);
+    width: 35%;
+    position: absolute;
+    right: 10%;
+  }
+
+  .image-cover {
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon {
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  .icon:hover {
+    color: $light-color;
+  }
+
+  .skill-box {
+    padding: 5%;
+    color: $primary-color;
+    color: $light-color;
+  }
+
+  .skill-title {
+    font-weight: bold;
+  }
+
+  .skill-description {
+    color: #fff;
+  }
+
+  .learn-more-button {
+    margin-top: 2.5%;
+    width: 75%;
+  }
+}
+
+// About page
+.about-page {
+  text-align: center;
+
+  img {
+    width: 75%;
+    margin: 0.75rem 0;
+  }
+
+  p {
+    margin: auto;
+  }
+
+  // .section-light {
+  //   h1 {
+  //     text-align: left;
+  //   }
+  // }
+  // .section-dark {
+  //   h1 {
+  //     text-align: right;
+  //   }
+  // }
+}
+
+// Blog landing page
+.blog-landing-page {
+  .post-preview {
+    padding: 1rem;
+    text-align: left;
+    margin: 1rem 0;
+
+    img {
+      width: 85%;
+      margin: auto;
+    }
+
+    .blog-header-container {
+      margin: auto;
+      padding: 0 1rem;
+    }
+
+    .blog-preview {
+      margin: auto;
+      padding: 0 1rem;
+    }
+  }
+}
+
+// Blog post page
+.blog-post-page {
+  img {
+    padding: 0 2rem 2rem 0;
+    float: left;
+    width: 40%;
+  }
+
+  p {
+    // padding: 2rem 0;
+    text-align: justify;
+  }
+}
+
+// Resume page
+.resume-page {
+  font-family: 'Tinos', serif;
+
+  ul {
+    padding-left: 2rem;
+    list-style: disc;
+  }
+
+  .resume-line {
+    margin: 8px 0;
+  }
+
+  .resume-lr {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .resume-lr-l {
+    text-align: left;
+    /* display: inline-block; */
+    /* position: absolute;
+    right: 0; */
+  }
+
+  .resume-lr-r {
+    text-align: right;
+    /* display: inline-block; */
+    /* position: absolute;
+    right: 0; */
+  }
+
+  /* Text Classes */
+  .resume-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .resume-subtitle {
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+    margin-bottom: 4px;
+  }
+
+  .resume-text {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .resume-list-item {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    overflow-wrap: break-word;
+  }
+
+  .remove-link-style {
+    color: black;
+    text-decoration: none;
+  }
+
+  .resume-bold {
+    font-weight: bold;
+  }
+
+  .resume-italic {
+    font-style: italic;
+  }
+
+  /* Section Styling */
+  .resume-container {
+    padding: 3% 5%;
+    border: solid black 1px;
+    text-align: left;
+  }
+
+  .resume-section {
+    margin-bottom: 16px;
+  }
+
+  .resume-header {
+    text-align: center;
+    line-height: 0.75;
+  }
+
+  /* Other Resume */
+  .download-resume {
+    margin: 16px 0;
+  }
+}
+
+// Project landing page
+.project-landing-page {
+  .tag-filter-drowpdown {
+    text-align: left;
+    width: 100%;
+  }
+
+  .tag-filter-width {
+    width: 100%;
+  }
+
+  .selected-tag-filters {
+    text-align: left;
+    font-size: 0.1rem;
+    border-radius: 40px;
+  }
+
+  .selected-tag-filter {
+    font-size: 0.5rem;
+    border-radius: 40px;
+    width: auto;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .delete-tag-filter {
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  // .project-card-container {
+  //   margin: 0.5rem 0;
+  // }
+
+  .project-card {
+    // margin: 0.5rem;
+    padding: 0.25rem 0.5rem 0.5rem;
+    text-align: center;
+    @include set-background($dark-color);
+    &:hover {
+      background: lighten($dark-color, 5%);
+    }
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    // border: solid 1px $dark-color;
+    border-radius: 5px;
+
+    .project-card-title {
+      height: 3rem;
+      word-wrap: break-word;
+      margin: 0.5rem 0 1rem;
+    }
+
+    img {
+      width: 70%;
+      border-radius: 5px;
+    }
+
+    .project-card-description {
+      height: 3rem;
+    }
+
+    .selected-tag-filter-container {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Personal website description
+.personal-website-description {
+  li {
+    list-style-type: none;
+
+    :hover {
+      color: $white-color;
+    }
+
+    li {
+      list-style-type: square;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// CSS Rainbow Spiral
+.rs {
+  &-rsstart {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    // border-radius: 50% 0 0 0;
+  }
+  &-ws-1 {
+    float: right;
+    height: 100%;
+    width: 38.1966011250105%;
+    /* border-radius: 0 50% 0 0; */
+  }
+
+  &-hs-1 {
+    height: 38.1966011250105%;
+    position: relative;
+    top: 61.8033988749895%;
+    width: 100%;
+    /* border-radius: 0 0 50% 0; */
+  }
+
+  &-ws-2 {
+    float: left;
+    height: 100%;
+    width: 38.1966011250105%;
+    /* border-radius: 0 0 0 50%; */
+  }
+
+  &-hs-2 {
+    height: 38.1966011250105%;
+    width: 100%;
+    /* border-radius: 50% 0 0 0; */
+  }
+
+  &-c8 {
+    background-color: red;
+  }
+
+  &-c1 {
+    background-color: orange;
+  }
+
+  &-c2 {
+    background-color: yellow;
+  }
+
+  &-c3 {
+    background-color: yellowgreen;
+  }
+
+  &-c4 {
+    background-color: green;
+  }
+
+  &-c5 {
+    background-color: blue;
+  }
+
+  &-c6 {
+    background-color: indigo;
+  }
+
+  &-c7 {
+    background-color: violet;
+  }
+}
+
+// Sudoku
+.sudoku {
+  .options-btn {
+    width: 100%;
+    margin: 0.25rem 0;
+    border-radius: 5px;
+  }
+
+  .sudoku-table {
+    border: solid $sudoku-border-outer black;
+    border-collapse: collapse;
+    font-size: $sudoku-cell-font;
+    width: $sudoku-table-width;
+    /* height: min(70vw, 65vh); */
+    table-layout: fixed;
+    margin: auto;
+  }
+
+  .sudoku-table-row {
+    height: $sudoku-cell-height;
+  }
+
+  /* td {
+    text-align: center;
+  } */
+
+  .sudoku-dark {
+    background-color: grey;
+  }
+
+  .sudoku-light {
+    background-color: white;
+  }
+
+  .sudoku-cell {
+    border: solid $sudoku-border-cell black;
+    /* padding: 0; */
+    color: #000;
+  }
+
+  .sudoku-right {
+    border-right: solid $sudoku-border-box black;
+  }
+
+  .sudoku-bottom {
+    border-bottom: solid $sudoku-border-box black;
+  }
+
+  .sudoku-pencil {
+    width: 100%;
+    height: 100%;
+    /* padding: 0; */
+    /* margin: 1px; */
+    /* border-collapse: collapse; */
+    font-weight: bolder;
+    /* font-size: 10px; */
+    font-size: $pencil-font-size;
+    /* padding: 5%; */
+  }
+
+  /* .sudoku-pencil tr {
+    height: 33.3%;
+    padding: 0;
+  } */
+
+  .sudoku-pencil-hide {
+    color: transparent;
+  }
+
+  .sudoku-crosshairs {
+    background-color: aliceblue;
+  }
+
+  .sudoku-same-number {
+    font-weight: bold;
+    background-color: lightgrey;
+  }
+
+  .sudoku-initial-cell {
+    color: blue;
+  }
+
+  .sudoku-error {
+    color: red;
+    background-color: lightcoral;
+  }
+
+  .sudoku-error-initial-input {
+    color: purple;
+    background-color: lightcoral;
+  }
+
+  .sudoku-cell-selected {
+    background-color: lightskyblue;
+    color: #000;
+  }
+
+  .sudoku-cell-selected-initial-input {
+    background-color: lightskyblue;
+    color: blue;
+  }
+
+  .bottom-number-table {
+    border-collapse: collapse;
+    /* font-size: 20px; */
+    width: 100%;
+    /* height: min(70vw, 65vh); */
+    table-layout: fixed;
+    margin: auto;
+  }
+
+  .bottom-number-container {
+    padding: 1px;
+  }
+
+  .bottom-number-div {
+    margin: auto;
+    width: $sudoku-table-width;
+  }
+
+  .bottom-number {
+    border: solid 1px;
+    border-radius: 5px;
+    /* display: inline-block; */
+    /* width: 8%; */
+  }
+
+  .bottom-number-selected {
+    background-color: $dark-color;
+    color: $white-color;
+  }
+
+  :hover.bottom-number {
+    background-color: $dark-color;
+    color: $white-color;
+  }
+
+  .pencil-cell {
+    padding: 0;
+  }
+
+  .col-light {
+    background-color: #fff;
+  }
+
+  .col-dark {
+    background-color: grey;
+  }
+
+  /* Dyamic Sudoku Cell Styles */
+
+  .sudoku-normal-cell {
+    color: black;
+  }
+
+  // .options-line-container {
+  //   padding: 0 10%;
+  // }
+
+  .options-line {
+    margin: 0.25rem 0;
+    border: 1px solid $dark-color;
+    border-bottom: none;
+  }
+
+  .options-column .sudoku-column .gameplay-column {
+    text-align: center;
+  }
+
+  .dual-btn-container {
+    .dual-btn {
+      display: inline;
+      float: left;
+      width: 50%;
+    }
+
+    .dual-btn:not(:last-child) {
+      border-right: none;
+    }
+
+    .dual-btn:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .dual-btn:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+// CSS Jeff
+.cssjeff {
+  .art-container {
+    height: calc(min(100vh, 80vw));
+    width: calc(min(100vh, 80vw));
+    padding: 16px;
+    margin: 0 auto;
+  }
+
+  .skin {
+    background-color: #ffcd94;
+  }
+
+  .hair {
+    background-color: brown;
+  }
+
+  .head {
+    height: 96%;
+    width: 96%;
+    margin: 2%;
+    border-radius: 50%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .hair-box {
+    height: 25%;
+    /*   background-color: red; */
+  }
+
+  .head-hair-padding {
+    float: left;
+    height: 100%;
+    width: 10%;
+  }
+
+  .head-hair {
+    border-radius: 25%;
+    float: left;
+    height: 100%;
+    width: 80%;
+  }
+
+  .forehead-box {
+    height: 5%;
+    /*   background-color: red; */
+  }
+
+  .eyebrows-box {
+    height: 5%;
+  }
+
+  .eyebrow-padding {
+    float: left;
+    height: 100%;
+    width: 15%;
+  }
+
+  .eyebrow {
+    float: left;
+    height: 80%;
+    width: 30%;
+  }
+
+  .unibrow {
+    float: left;
+    height: 100%;
+    width: 10%;
+  }
+
+  .eyes-box {
+    height: 12.5%;
+    /*   background-color: orange; */
+  }
+
+  .eye {
+    background-color: white;
+    border-radius: 50%;
+    height: 100%;
+    position: relative;
+    width: 30%;
+  }
+
+  .eye-left {
+    float: left;
+    left: 15%;
+  }
+
+  .eye-right {
+    float: right;
+    right: 15%;
+  }
+
+  .pupil {
+    background-color: black;
+    border-radius: 50%;
+    height: 50%;
+    position: relative;
+    top: 25%;
+    width: 20%;
+  }
+
+  .pupil-left {
+    left: 40%;
+  }
+
+  .pupil-right {
+    left: 40%;
+  }
+
+  .nose-box {
+    height: 12.5%;
+    /*   background-color: yellow; */
+  }
+
+  .sub-nose-box {
+    height: 90%;
+    width: 100%;
+  }
+
+  .nose-pad {
+    height: 100%;
+    width: 40%;
+    float: left;
+  }
+
+  .nose-parent {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    float: left;
+    height: 100%;
+    width: 20%;
+  }
+
+  .nose-cover {
+    float: left;
+    height: 110%;
+    left: 50%;
+    position: relative;
+    bottom: 5%;
+    width: 55%;
+  }
+
+  .mouth-box {
+    height: 30%;
+  }
+
+  .mouth-pad {
+    height: 100%;
+    width: 25%;
+    float: left;
+  }
+
+  .mouth-parent {
+    background-color: red;
+    border-radius: 50%;
+    float: left;
+    height: 100%;
+    width: 50%;
+  }
+
+  .mouth-cover {
+    height: 50%;
+    width: 100%;
+  }
+
+  .chin-box {
+    height: 10%;
+    /*   background-color: blue; */
+  }
+}
+
+.testing {
+  width: 100px;
+  height: 800px;
+  background: red;
+}
+
+// Keep this at the bottom
+@import 'mobile';
