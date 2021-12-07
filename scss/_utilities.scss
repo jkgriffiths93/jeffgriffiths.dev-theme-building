@@ -218,6 +218,15 @@
   grid-row-end: 2;
   width: 100%;
   overflow: auto;
+
+  .selected {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color;
+    }
+  }
 }
 
 /* Links inside the dropdown */
@@ -228,8 +237,7 @@
 }
 
 .dropdown-content p:hover {
-  background-color: $light-color;
-  color: $dark-color;
+  background-color: lighten($dark-color, 20%);
 }
 
 .dropdown:hover .dropdown-content {
