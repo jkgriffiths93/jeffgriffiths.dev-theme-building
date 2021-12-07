@@ -13,6 +13,9 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
     <title>Jeff Griffiths</title>
 </head>
@@ -20,88 +23,203 @@
   <div class="page-container">
     <!-- Navbar ------------------------------------- -->
     <nav class="navbar bg-dark">
-      <h1>
-        <a href="index.html">
-          <i class="fas fa-project-diagram text-logo"></i> Jeff Griffiths
-        </a>
-      </h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="professionalresume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
+      <div class="nav-content">
+        <h1>
+          <a href="index.html">
+            <i class="fas fa-project-diagram text-logo"></i> Jeff Griffiths
+          </a>
+        </h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a hrefre="blog.html">Blog</a></li>
+          <li><a href="professionalresume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
     </nav>
     <!-- -------------------------------------------- -->
     <div class="content-container personal-website-description">
       <div class="section-light">
-        <div class="section-container grid">
+        <div class="section-container grid grid-gap-12 header-section">
           <h1 class="large text-primary">jeffgriffiths.dev</h1>
-          <p class="lead">Nov 2021: created this website as a means of practicing as I learn Web Development; it also stands a an interactive CV and portfolio</p>
+          <p class="lead"><strong>Dec 2021</strong>: created this website as a means of practicing as I learn Web Development; it also stands a an interactive CV and portfolio</p>
+          <a href="index.html"><img src="img/Website Screenshot.jpeg" alt="jeffgriffiths.dev Screenshot" /></a>
         </div>
       </div>
       <div class="section-dark">
-        <div class="section-container grid">
+        <div class="section-container grid grid-gap-12 skills-section">
           <h1 class="large text-primary">Skills</h1>
-          <ul class="text-light">
-            <li>
-              <a href="https://www.mongodb.com" class="small text-light">MongoDB</a>
+          <h2 class="medium text-light">Used in this application</h2>
+
+          <div class="skill-card-container grid grid-gap-12">
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://www.mongodb.com">
+              <div class="skill-title-container">
+                <i class="devicon-mongodb-plain colored"></i>
+                <p class="small skill-card-title">MongoDB</p>
+              </div>
               <ul>
-                <li class="x-small text-white">My MongoDB database is hosted on Atlas</li>
-                <li class="x-small text-white">There are three collections used for 1. Blog Posts 2. Project Cards on Landing Page and 3. Sudoku puzzles and answers</li>
-                <li class="x-small text-white">I recognize these are simple use cases, and the data in each collection won't change regularly-- to simplify, I might save data as static JSON files in the future that my server can serve directly</li>
+                <li class="x-small text-white">Hosted on Atlas and used for the Sudoku application (puzzles and answers)</li>
               </ul>
-            </li>
-            <li>
-              <a href="https://expressjs.com" class="small text-light">Express</a>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://expressjs.com">
+              <div class="skill-title-container">
+                <i class="devicon-express-original colored"></i>
+                <p class="small skill-card-title">Express</p>
+              </div>
               <ul>
                 <li class="x-small text-white">Framework for setting up the server, routing, APIs, etc.</li>
               </ul>
-            </li>
-            <li>
-              <a href="https://reactjs.org" class="small text-light">React</a>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://reactjs.org">
+              <div class="skill-title-container">
+                <i class="devicon-react-original colored"></i>
+                <p class="small skill-card-title">React</p>
+              </div>
               <ul>
-                <li class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa odio alias distinctio aliquid ea dolor veritatis accusantium ullam, tempora sed eos quis. Ab atque expedita nisi. Placeat, laborum hic.</li>
-                <li class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa odio alias distinctio aliquid ea dolor veritatis accusantium ullam, tempora sed eos quis. Ab atque expedita nisi. Placeat, laborum hic.</li>
-                <li class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa odio alias distinctio aliquid ea dolor veritatis accusantium ullam, tempora sed eos quis. Ab atque expedita nisi. Placeat, laborum hic.</li>
+                <li class="x-small text-white">Front end templating and interactivity using hooks</li>
               </ul>
-            </li>
-            <li>
-              <a href="https://nodejs.org/en/" class="small text-light">Node</a>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://nodejs.org/en/">
+              <div class="skill-title-container">
+                <i class="devicon-nodejs-plain colored"></i>
+                <p class="small skill-card-title">Node.js</p>
+              </div>
               <ul>
                 <li class="x-small text-white">Used to build both the backend and frontend</li>
               </ul>
-            </li>
-            <li>
-              <a href="https://sass-lang.com" class="small text-light">Sass</a>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://www.heroku.com/about">
+              <div class="skill-title-container">
+                <i class="devicon-heroku-plain colored"></i>
+                <p class="small skill-card-title">Heroku</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">Deployed on Heroku using Heroku CLI</li>
+              </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://sass-lang.com">
+              <div class="skill-title-container">
+                <i class="devicon-sass-plain colored"></i>
+                <p class="small skill-card-title">Sass</p>
+              </div>
               <ul>
                 <li class="x-small text-white">Used while theme building and then implemented as a compiled CSS</li>
               </ul>
-            </li>
-            <li>
-              <a href="#!" class="small text-light">Skills Not Used</a>
+            </a>
+          </div>
+
+          <h2 class="medium text-light my-2">Used in other applications</h2>
+
+          <div class="skill-card-container grid grid-gap-12">
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://redux.js.org">
+              <div class="skill-title-container">
+                <i class="devicon-redux-plain colored"></i>
+                <p class="small skill-card-title">Redux</p>
+              </div>
               <ul>
-                <li class="x-small text-white"><b>Redux</b>: no authentication or global state needed, so opted to just use useState for each individual page instead</li>
-                <li class="x-small text-white"><b>JWT Authentication</b>: no authentication needed for app, but have experience using JWT for authentication</li>
-                <li class="x-small text-white"><b>Bootstrap</b>: have used Bootstrap in the past but unless I'm creating a simple UI for complext backend, I opt to create Bootstrap like functionality using Sass and React</li>
-                <li class="x-small text-white"><b>EJS</b>: I've used EJS extensively in the past but now opt to use React</li>
-                <li class="x-small text-white"><b>Javascript/JQuery</b>: indirectly using Javascript through react, but have in the past built out event listeners and interacted with the DOM directly using Javascript</li>
-                <li class="x-small text-white"><b>SQL</b>: opted for NoSQL (MongoDB specifically) for scalability in future projects, but have extensive experience building and querying SQL tables from profession as a Corporate Finance Professional</li>
+                <li class="x-small text-white">No authentication or global state needed, so opted to just use useState for each individual page instead</li>
               </ul>
-            </li>
-          </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://jwt.io">
+              <div class="skill-title-container">
+                <!-- <i class="devicon-jtwauth-plain colored"></i> -->
+                <p class="small skill-card-title">JWT Auth</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">No authentication needed for app, but have experience using JWT for authentication</li>
+              </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://getbootstrap.com/">
+              <div class="skill-title-container">
+                <i class="devicon-bootstrap-plain colored"></i>
+                <p class="small skill-card-title">Bootstrap</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">Have used Bootstrap in the past but unless I'm creating a simple UI for complext backend, I opt to create Bootstrap like functionality using Sass and React</li>
+              </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://ejs.co/">
+              <div class="skill-title-container">
+                <!-- <i class="devicon-ejs-plain colored"></i> -->
+                <p class="small skill-card-title">EJS</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">I've used EJS extensively in the past but now opt to use React</li>
+              </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://jquery.com">
+              <div class="skill-title-container">
+                <i class="devicon-jquery-plain colored"></i>
+                <p class="small skill-card-title">JQuery</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">Indirectly using Javascript through react, but have in the past built out event listeners and interacted with the DOM directly using Javascript</li>
+              </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://www.javascript.com">
+              <div class="skill-title-container">
+                <i class="devicon-javascript-plain colored"></i>
+                <p class="small skill-card-title">JavaScript</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">Indirectly using Javascript through react, but have in the past built out event listeners and interacted with the DOM directly using Javascript</li>
+              </ul>
+            </a>
+            <a class="skill-card col-lg-3 col-xlg-2" href="https://www.javascript.com">
+              <div class="skill-title-container">
+                <i class="devicon-mysql-plain colored"></i>
+                <p class="small skill-card-title">MySQL/SQL</p>
+              </div>
+              <ul>
+                <li class="x-small text-white">Opted for NoSQL (MongoDB specifically) for scalability in future projects, but have extensive experience building and querying SQL tables from profession as a Corporate Finance Professional</li>
+              </ul>
+            </a>
+          </div>
         </div>
       </div>
       <div class="section-light">
-        <div class="section-container grid">
+        <div class="section-container grid grid-gap-12 evolution-section">
           <h1 class="large text-primary">
             Evolution
           </h1>
-          <p class="lead">I built this website in three main iterations as I went through two Udemy courses: "The Complete Web Development Bootcamp" -Dr. Angela Yu and "MERN Stack Front to Back" -Brad Traversy.</p>
-          <p class="lead"><b>Iteration 1</b>: front end only-- static HTML, Bootstrap, with some functionality through Javascript/JQuery</p>
-          <p class="lead"><b>Iteration 2</b>: backend using Node and Exress with front end similar to first iteration, but rendered by an EJS engine</p>
-          <p class="lead"><b>Iteration 3</b>: MERN stack with a theme building exercise using plain HTML and Sass</p>
+          
+          <div class="col-lg-6 col-xlg-6 timeline-container">
+            <h1 class="small text-dark evolution-subsection-header">Iteration Progress</h1>
+            <ul class="timeline">
+              <li class="event" data-date="Aug 2021">
+                <h3>Iteration 1</h3>
+                <p>Front end only-- static HTML, Bootstrap, with some functionality through Javascript/JQuery</p>
+              </li>
+              <li class="event" data-date="Sep 2021">
+                <h3>Iteration 2</h3>
+                <p>Backend using Node and Exress with front end similar to first iteration, but rendered by an EJS engine</p>    
+              </li>
+              <li class="event" id="date" data-date="Dec 2021">
+                <h3>Iteration 3</h3>
+                <p>MERN stack with a theme building exercise using plain HTML and Sass</p>    
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-xlg-6 learning-container">
+            <h1 class="small text-dark evolution-subsection-header">Resources (Udemy)</h1>
+            <div class="udemy-card-container">
+              <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">
+                <div class="udemy-card">
+                  <img src="https://img-c.udemycdn.com/course/480x270/1565838_e54e_14.jpg" alt="Complete Web Dev Bootcamp course pic" />
+                  <h1 class="udemy-title small">The Complete WebDev Bootcamp</h1>
+                  <h2 class="udemy-author x-small">Dr. Angela Yu</h2>
+                </div>
+              </a>
+              <a href="https://www.udemy.com/course/mern-stack-front-to-back/">
+                <div class="udemy-card">
+                  <img src="https://img-b.udemycdn.com/course/480x270/1646980_23f7_2.jpg" alt="MERN Stack course pic" />
+                  <h1 class="udemy-title small">MERN Stack Front to Back</h1>
+                  <h2 class="udemy-author x-small">Brad Traversy</h2>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

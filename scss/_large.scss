@@ -1,0 +1,13 @@
+@media (min-width: $large-width) {
+  .home-page {
+    .title-text-container {
+      margin: auto;
+    }
+
+    .title-image {
+      position: static;
+      transform: rotate(0);
+      width: 100%;
+    }
+  }
+}

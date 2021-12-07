@@ -31,10 +31,10 @@ img {
 
 // Navbar
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 2rem;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // padding: 0.7rem 2rem;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -42,17 +42,27 @@ img {
   border-bottom: solid 1px $primary-color;
   //   opacity: 0.9;
 
-  ul {
+  .nav-content {
     display: flex;
-  }
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    align-items: center;
 
-  a {
-    color: #fff;
-    padding: 0.45rem;
-    margin: 0 0.25rem;
+    max-width: $max-width;
+    margin: auto;
 
-    &:hover {
-      color: $primary-color;
+    ul {
+      display: flex;
+    }
+
+    a {
+      color: #fff;
+      padding: 0.45rem;
+      margin: 0 0.25rem;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }
@@ -81,11 +91,6 @@ img {
 .home-page {
   text-align: center;
   padding: 6rem 0;
-
-  // .title-image-container {
-  //   position: absolute;
-  //   z-index: -1;
-  // }
 
   .title-image {
     border-radius: 5px;
@@ -290,8 +295,9 @@ img {
     width: 100%;
   }
 
-  .tag-filter-width {
+  .tag-filter {
     width: 100%;
+    padding: 0.75rem 1rem;
   }
 
   // .selected-filter-option {
@@ -358,17 +364,227 @@ img {
 
 // Personal website description
 .personal-website-description {
-  li {
-    list-style-type: none;
+  .header-section {
+    h1,
+    p {
+      grid-column: 1 / span 9;
+      margin-right: 1rem;
+    }
 
-    :hover {
-      color: $white-color;
+    h1 {
+      grid-row: 1 / span 1;
+    }
+
+    p {
+      grid-row: 2 / span 1;
+    }
+
+    a {
+      width: 100%;
+      grid-row: 1 / span 2;
+      grid-column: 10 / span 3;
+      height: 100%;
+    }
+
+    img {
+      border-radius: 5px;
+    }
+
+    div {
+      text-align: left;
+      margin: 0 2rem;
+    }
+  }
+
+  // .skill-card-container {
+  //   margin: 0.5rem 0;
+  // }
+
+  .skill-card {
+    // margin: 0.5rem;
+    padding: 0.25rem 0.5rem 0.5rem;
+    text-align: center;
+    // height: 300px;
+    @include set-background($primary-color);
+    &:hover {
+      background: darken($primary-color, 5%);
+    }
+    // box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+
+    // border: solid 1px $dark-color;
+    border-radius: 5px;
+
+    .skill-title-container {
+      margin: auto;
+      padding-top: 0.5rem;
+    }
+
+    i {
+      font-size: 1.25rem;
+      color: $light-color;
+      display: inline-flex;
+      margin-right: 0.125rem;
+    }
+
+    .skill-card-title {
+      word-wrap: break-word;
+      display: inline-flex;
+      margin: 0;
+    }
+
+    // .skill-card-description {
+    //   height: 3rem;
+    // }
+
+    ul {
+      text-align: left;
     }
 
     li {
-      list-style-type: square;
-      margin-left: 1.5rem;
-      margin-top: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+
+  .evolution-section {
+    .learning-container,
+    .timeline-container {
+      padding: 1rem;
+    }
+
+    .evolution-subsection-header {
+      text-align: left;
+    }
+
+    .learning-container {
+      .udemy-card-container {
+        margin: 1.5rem 0;
+      }
+
+      .udemy-card {
+        @include set-background($dark-color);
+        &:hover {
+          background: lighten($dark-color, 5%);
+        }
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        counter-reset: div;
+
+        img {
+          width: 100%;
+          margin: auto;
+          grid-row: 1 / span 2;
+          grid-column: 1 / span 4;
+        }
+
+        h1,
+        h2 {
+          grid-column: 5 / span 8;
+          padding-left: 0.5rem;
+        }
+
+        h1 {
+          grid-row: 1 / span 1;
+        }
+
+        h2 {
+          grid-row: 2 / span 1;
+        }
+
+        // h1 {
+        //   font-size: 1rem;
+        // }
+
+        h2 {
+          // font-size: 0.25rem;
+          color: $light-color;
+        }
+      }
+    }
+
+    .timeline-container {
+      text-align: center;
+
+      $background: #252827;
+
+      $spacing: 1.5rem;
+      $date: 7.5rem;
+      $dotborder: 0.25rem;
+      $dot: 0.6875rem;
+      $line: 0.25rem;
+
+      .timeline {
+        border-left: $line solid $primary-color;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        background: fade($white-color, 3%);
+        color: fade(white, 80%);
+        margin: $spacing;
+        letter-spacing: 0.5px;
+        position: relative;
+        line-height: 1.4em;
+        padding: $spacing $spacing 0.5 * $spacing $spacing;
+        list-style: none;
+        text-align: left;
+        max-width: 90%;
+        margin-left: 30%;
+
+        h1 {
+          letter-spacing: 1.5px;
+        }
+
+        h2,
+        h3 {
+          letter-spacing: 1.5px;
+        }
+
+        .event {
+          border-bottom: 1px dashed fade($white-color, 10%);
+          padding-bottom: 0.5rem;
+          margin-bottom: 0.5rem;
+          position: relative;
+
+          &:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+          }
+
+          &:before,
+          &:after {
+            position: absolute;
+            display: block;
+            top: 0;
+          }
+
+          &:before {
+            left: (
+                (($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) *
+                  1.5
+              ) * -1;
+            color: fade($white-color, 40%);
+            content: attr(data-date);
+            text-align: right;
+            min-width: $date;
+          }
+
+          &:after {
+            box-shadow: 0 0 0 $dotborder fade($primary-color, 5%);
+            left: ($spacing + $line + ($dot * 0.31)) * -1;
+            background: lighten($primary-color, 5%);
+            border-radius: 50%;
+            height: $dot;
+            width: $dot;
+            content: '';
+            top: 5px;
+          }
+        }
+      }
     }
   }
 }
@@ -812,3 +1028,4 @@ img {
 
 // Keep this at the bottom
 @import 'mobile';
+@import 'large';
