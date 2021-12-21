@@ -130,7 +130,7 @@ img {
 
   .learn-more-button {
     margin-top: 2.5%;
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -138,9 +138,15 @@ img {
 .about-page {
   text-align: center;
 
+  .about-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   img {
     width: 75%;
-    margin: 0.75rem 0;
+    border-radius: 5px;
   }
 
   p {
@@ -179,6 +185,7 @@ img {
     .blog-preview {
       margin: auto;
       padding: 0 1rem;
+      line-height: 1.3rem;
     }
   }
 }
@@ -298,6 +305,11 @@ img {
   .tag-filter {
     width: 100%;
     padding: 0.75rem 1rem;
+    border-radius: 5px;
+  }
+
+  .dropdown-content {
+    border-radius: 5px;
   }
 
   // .selected-filter-option {
@@ -306,13 +318,14 @@ img {
 
   .selected-tag-filters {
     text-align: left;
-    font-size: 0.1rem;
-    border-radius: 40px;
+    //   font-size: 0.1rem;
+    //   border-radius: 40px;
   }
 
   .selected-tag-filter {
     font-size: 0.5rem;
     border-radius: 40px;
+    border: none;
     width: auto;
     padding: 0.25rem 0.5rem;
   }
@@ -341,23 +354,52 @@ img {
     border-radius: 5px;
 
     .project-card-title {
-      height: 3rem;
+      // height: 3rem;
       word-wrap: break-word;
       margin: 0.5rem 0 1rem;
+      // height: 20%;
     }
 
-    img {
+    .project-card-img-container {
+      display: inline-block;
+      position: relative;
       width: 70%;
+      // background: $white-color;
       border-radius: 5px;
     }
 
-    .project-card-description {
+    .img-spacer {
+      margin-top: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 5px;
+      margin: auto;
+    }
+
+    .project-card-date {
+      margin: 0.5rem 0;
+    }
+
+    .project-card-description-container {
       height: 3rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .project-card-description {
+      margin: auto;
     }
 
     .selected-tag-filter-container {
       text-align: center;
       margin-bottom: 0.5rem;
+      // height: 20%;
     }
   }
 }
@@ -670,10 +712,13 @@ img {
     border: solid $sudoku-border-outer black;
     border-collapse: collapse;
     font-size: $sudoku-cell-font;
+
     width: $sudoku-table-width;
     /* height: min(70vw, 65vh); */
     table-layout: fixed;
     margin: auto;
+    // max-width: $max-width/10;
+    // max-height: $max-width/10;
   }
 
   .sudoku-table-row {
@@ -696,6 +741,10 @@ img {
     border: solid $sudoku-border-cell black;
     /* padding: 0; */
     color: #000;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .sudoku-right {
@@ -727,38 +776,72 @@ img {
     color: transparent;
   }
 
+  // -----------------------
+
   .sudoku-crosshairs {
-    background-color: aliceblue;
+    background: lighten($light-color, 15%);
   }
 
   .sudoku-same-number {
     font-weight: bold;
-    background-color: lightgrey;
+    background: lightgrey;
   }
 
   .sudoku-initial-cell {
     color: blue;
+
+    &.sudoku-error {
+      color: purple;
+      background: lightcoral;
+
+      &.sudoku-cell-selected {
+        color: purple;
+        background: $primary-color;
+      }
+    }
+
+    &.sudoku-cell-selected {
+      color: blue;
+      background: $primary-color;
+    }
   }
 
   .sudoku-error {
-    color: red;
-    background-color: lightcoral;
-  }
+    color: #000;
+    background: lightcoral;
 
-  .sudoku-error-initial-input {
-    color: purple;
-    background-color: lightcoral;
+    &.sudoku-cell-selected {
+      color: red;
+      background: $primary-color;
+    }
   }
 
   .sudoku-cell-selected {
-    background-color: lightskyblue;
     color: #000;
+    background: $primary-color;
   }
 
-  .sudoku-cell-selected-initial-input {
-    background-color: lightskyblue;
-    color: blue;
-  }
+  // -----------------------
+
+  // .sudoku-error-initial-input {
+  //   color: purple;
+  //   background-color: lightcoral;
+
+  //   &.sudoku-cell-selected-initial-input {
+  //     background-color: $primary-color;
+  //     color: purple;
+  //   }
+  // }
+
+  // .sudoku-cell-selected {
+  //   background-color: $primary-color;
+  //   color: #000;
+  // }
+
+  // .sudoku-cell-selected-initial-input {
+  //   background-color: $primary-color;
+  //   color: blue;
+  // }
 
   .bottom-number-table {
     border-collapse: collapse;
@@ -813,9 +896,12 @@ img {
     color: black;
   }
 
-  // .options-line-container {
-  //   padding: 0 10%;
-  // }
+  .options-line-container {
+    position: block;
+    position: relative;
+    //   display: block;
+    //   //   padding: 0 10%;
+  }
 
   .options-line {
     margin: 0.25rem 0;
@@ -827,27 +913,61 @@ img {
     text-align: center;
   }
 
-  .dual-btn-container {
-    .dual-btn {
+  .multi-btn-container {
+    display: flex;
+
+    .multi-btn {
       display: inline;
       float: left;
-      width: 50%;
+      // text-align: center;
+      padding-left: 0;
+      padding-right: 0;
     }
 
-    .dual-btn:not(:last-child) {
+    .multi-btn:not(:last-child) {
       border-right: none;
     }
 
-    .dual-btn:first-child {
+    .multi-btn:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
-    .dual-btn:last-child {
+    .multi-btn:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
+    .multi-btn:not(:last-child):not(:first-child) {
+      border-radius: 0;
+    }
   }
+
+  // .triple-btn-container {
+  //   .triple-btn {
+  //     display: inline;
+  //     float: left;
+  //     width: 33%;
+  //   }
+
+  //   .triple-btn:not(:last-child) {
+  //     border-right: none;
+  //   }
+
+  //   .triple-btn:first-child {
+  //     border-top-right-radius: 0;
+  //     border-bottom-right-radius: 0;
+  //   }
+
+  //   .triple-btn:last-child {
+  //     border-top-left-radius: 0;
+  //     border-bottom-left-radius: 0;
+  //   }
+
+  //   .triple-btn:not(:last-child):not(:first-child) {
+  //     border-radius: 0;
+  //   }
+  // }
 }
 
 // CSS Jeff
@@ -855,6 +975,8 @@ img {
   .art-container {
     height: calc(min(100vh, 80vw));
     width: calc(min(100vh, 80vw));
+    max-width: $max-width;
+    max-height: $max-width;
     padding: 16px;
     margin: 0 auto;
   }

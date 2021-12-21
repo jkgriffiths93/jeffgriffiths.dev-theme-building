@@ -7,14 +7,9 @@
     <!-- Google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500;700&family=Tinos&display=swap">
     <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+    <script src="https://kit.fontawesome.com/674be72183.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Jeff Griffiths</title>
+    <title>Theme Building - Jeff Griffiths</title>
 </head>
 <body>
   <div class="page-container">
@@ -43,6 +38,10 @@
         <p class="lead">Sep 2021: classic sudoku puzzle with various features and functionality</p>
           <div class="col-xlg-3 col-lg-3 options-column">
             <p class="my-1 medium">Options</p>
+            <div class="multi-btn-container">
+              <button class="btn btn-dark options-btn multi-btn multi-btn-2">Manual</button>
+              <button class="btn btn-white options-btn multi-btn multi-btn-2">Auto</button>
+            </div>
             <button class="btn btn-white options-btn">Initial Input Mode</button>
             <button class="btn btn-white options-btn">Error Warning</button>
             <button class="btn btn-white options-btn">Highlight Selected #'s</button>
@@ -51,9 +50,9 @@
             <button class="btn btn-white options-btn">Auto-Remove Pencil</button>
             <button class="btn btn-white options-btn">Rapid Fill</button>
             <button class="btn btn-white options-btn">Initial Input Mode</button>
-            <div class="dual-btn-container">
-              <button class="btn btn-dark options-btn dual-btn">Pen</button>
-              <button class="btn btn-white options-btn dual-btn">Pencil</button>
+            <div class="multi-btn-container">
+              <button class="btn btn-dark options-btn multi-btn">Pen</button>
+              <button class="btn btn-white options-btn multi-btn">Pencil</button>
             </div>
           </div>
           <div class="col-xlg-6 col-lg-6 sudoku-column">
@@ -63,8 +62,8 @@
                 <table class="sudoku-table">
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-dark" id="r1-c1"></td>
-                    <td class="sudoku-cell sudoku-dark" id="r1-c2"></td>
-                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r1-c3"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r1-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-right sudoku-same-number" id="r1-c3">4</td>
                     <td class="sudoku-cell sudoku-light" id="r1-c4">1</td>
                     <td class="sudoku-cell sudoku-light" id="r1-c5"></td>
                     <td class="sudoku-cell sudoku-light sudoku-right" id="r1-c6"></td>
@@ -73,9 +72,9 @@
                     <td class="sudoku-cell sudoku-dark" id="r1-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-dark" id="r2-c1"></td>
-                    <td class="sudoku-cell sudoku-dark" id="r2-c2">3</td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r2-c2">3</td>
                     <td class="sudoku-cell sudoku-dark sudoku-right" id="r2-c3"></td>
-                    <td class="sudoku-cell sudoku-light" id="r2-c4"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-same-number" id="r2-c4">4</td>
                     <td class="sudoku-cell sudoku-light" id="r2-c5"></td>
                     <td class="sudoku-cell sudoku-light sudoku-right" id="r2-c6"></td>
                     <td class="sudoku-cell sudoku-dark" id="r2-c7"></td>
@@ -83,7 +82,7 @@
                     <td class="sudoku-cell sudoku-dark" id="r2-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c1">9</td>
-                    <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-bottom sudoku-crosshairs" id="r3-c2"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-bottom sudoku-right" id="r3-c3"></td>
                     <td class="sudoku-cell sudoku-light sudoku-bottom" id="r3-c4"></td>
                     <td class="sudoku-cell sudoku-light sudoku-bottom" id="r3-c5"></td>
@@ -93,7 +92,7 @@
                     <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r3-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-light" id="r4-c1"></td>
-                    <td class="sudoku-cell sudoku-light" id="r4-c2"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-crosshairs" id="r4-c2"></td>
                     <td class="sudoku-cell sudoku-light sudoku-right" id="r4-c3"></td>
                     <td class="sudoku-cell sudoku-dark" id="r4-c4"></td>
                     <td class="sudoku-cell sudoku-dark" id="r4-c5"></td>
@@ -103,7 +102,7 @@
                     <td class="sudoku-cell sudoku-light" id="r4-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-light" id="r5-c1"></td>
-                    <td class="sudoku-cell sudoku-light" id="r5-c2"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-crosshairs" id="r5-c2"></td>
                     <td class="sudoku-cell sudoku-light sudoku-right" id="r5-c3"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-initial-cell" id="r5-c4">8</td>
                     <td class="sudoku-cell sudoku-dark" id="r5-c5"></td>
@@ -113,7 +112,7 @@
                     <td class="sudoku-cell sudoku-light" id="r5-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c1"></td>
-                    <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c2"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-bottom sudoku-crosshairs" id="r6-c2"></td>
                     <td class="sudoku-cell sudoku-light sudoku-bottom sudoku-right" id="r6-c3"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r6-c4"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-bottom" id="r6-c5"></td>
@@ -123,7 +122,7 @@
                     <td class="sudoku-cell sudoku-light sudoku-bottom" id="r6-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-dark" id="r7-c1"></td>
-                    <td class="sudoku-cell sudoku-dark" id="r7-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r7-c2"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-right" id="r7-c3"></td>
                     <td class="sudoku-cell sudoku-light" id="r7-c4"></td>
                     <td class="sudoku-cell sudoku-light" id="r7-c5"></td>
@@ -132,14 +131,14 @@
                     <td class="sudoku-cell sudoku-dark" id="r7-c8"></td>
                     <td class="sudoku-cell sudoku-dark" id="r7-c9"></td>
                   <tr class="sudoku-table-row">
-                    <td class="sudoku-cell sudoku-dark" id="r8-c1"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r8-c1"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-cell-selected" id="r8-c2">4</td>
-                    <td class="sudoku-cell sudoku-dark sudoku-right" id="r8-c3"></td>
-                    <td class="sudoku-cell sudoku-light" id="r8-c4"></td>
-                    <td class="sudoku-cell sudoku-light" id="r8-c5"></td>
-                    <td class="sudoku-cell sudoku-light sudoku-right" id="r8-c6"></td>
-                    <td class="sudoku-cell sudoku-dark" id="r8-c7"></td>
-                    <td class="sudoku-cell sudoku-dark" id="r8-c8">
+                    <td class="sudoku-cell sudoku-dark sudoku-right sudoku-crosshairs" id="r8-c3"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-crosshairs" id="r8-c4"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-crosshairs" id="r8-c5"></td>
+                    <td class="sudoku-cell sudoku-light sudoku-right sudoku-crosshairs" id="r8-c6"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r8-c7"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r8-c8">
                       <table class="sudoku-pencil">
                         <tr>
                           <td class="num1">1</td>
@@ -158,10 +157,10 @@
                         </tr>
                       </table>
                     </td>
-                    <td class="sudoku-cell sudoku-dark" id="r8-c9"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r8-c9"></td>
                   <tr class="sudoku-table-row">
                     <td class="sudoku-cell sudoku-dark" id="r9-c1"></td>
-                    <td class="sudoku-cell sudoku-dark" id="r9-c2"></td>
+                    <td class="sudoku-cell sudoku-dark sudoku-crosshairs" id="r9-c2"></td>
                     <td class="sudoku-cell sudoku-dark sudoku-right" id="r9-c3"></td>
                     <td class="sudoku-cell sudoku-light" id="r9-c4"></td>
                     <td class="sudoku-cell sudoku-light" id="r9-c5"></td>
@@ -196,13 +195,33 @@
             <div class="options-line-container"><hr class="options-line" /></div>
             <button class="btn btn-primary options-btn">Autofill Pencil</button>
             <div class="options-line-container"><hr class="options-line" /></div>
+            <div class="multi-btn-container">
+              <button class="btn btn-primary options-btn multi-btn multi-btn-3">Ez</button>
+              <button class="btn btn-white options-btn multi-btn multi-btn-3">Med</button>
+              <button class="btn btn-white options-btn multi-btn multi-btn-3">Hard</button>
+            </div>
+            <div class="options-line-container"><hr class="options-line" /></div>
             <button class="btn btn-danger options-btn">Reset Input</button>
           </div>
 
 
         </div>
+        <div class="section-dark">
+          <div class="section-container">
+            <h1 class="medium text-primary">Instructions</h1>
+            <h2 class="x-small text-light">Navigation</h2>
+            <p class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel magni at qui ducimus. Ipsam laudantium eius aspernatur fuga libero similique nihil, incidunt qui earum explicabo pariatur est minus totam.</p>
+            <p class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel magni at qui ducimus. Ipsam laudantium eius aspernatur fuga libero similique nihil, incidunt qui earum explicabo pariatur est minus totam.</p>
+            <p class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel magni at qui ducimus. Ipsam laudantium eius aspernatur fuga libero similique nihil, incidunt qui earum explicabo pariatur est minus totam.</p>
+            <h2 class="x-small text-light">Buttons</h2>
+            <p class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel magni at qui ducimus. Ipsam laudantium eius aspernatur fuga libero similique nihil, incidunt qui earum explicabo pariatur est minus totam.</p>
+            <p class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel magni at qui ducimus. Ipsam laudantium eius aspernatur fuga libero similique nihil, incidunt qui earum explicabo pariatur est minus totam.</p>
+            <p class="x-small text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab vel magni at qui ducimus. Ipsam laudantium eius aspernatur fuga libero similique nihil, incidunt qui earum explicabo pariatur est minus totam.</p>
+          </div>
+        </div>
       </div>
     </div>
+
     <!-- Footer ------------------------------------- -->
     <footer class="footer bg-dark">
       <a href="https://www.linkedin.com/in/jeff-griffiths-5794b6ab">

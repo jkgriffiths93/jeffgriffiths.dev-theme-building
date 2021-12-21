@@ -12,14 +12,22 @@ $nav-spacer: 5rem;
 $mobile-width: 700px;
 $large-width: 1440px;
 
-$sudoku-cell-font: 1.25rem;
-// $sudoku-cell-font: calc(2vh);
-$pencil-font-size: 0.3 * $sudoku-cell-font;
+$stf-base: 1.5 * 10;
+$stf-pencil: 3.7;
+$stf-mobile: 10;
+$sudoku-cell-font: calc(min(40vw, 65vh, 434px) / (1.5 * 10));
+$pencil-font-size: calc(
+  min(40vw, 65vh, 434px) / (3.7 * 1.5 * 10)
+); // calc(0.275 * $sudoku-cell-font);
+$sudoku-cell-font-mobile: calc(min(40vw, 65vh, 434px) / (1.5 * 10 * 0.4));
+$pencil-font-size-mobile: calc(min(40vw, 65vh, 434px) / (3.7 * 1.5 * 10 * 0.4));
 // $pencil-font-size: 0.375rem;
 // $pencil-ratio: 0.3;
 
-$sudoku-table-width: calc(min(40vw, 65vh));
-$sudoku-cell-height: calc(min(40vw, 65vh) / 9);
+// $sudoku-table-width: calc(min(40vw, 65vh));
+// $sudoku-cell-height: calc(min(40vw, 65vh) / 9);
+$sudoku-table-width: calc(min(40vw, 65vh, 434px));
+$sudoku-cell-height: calc(min(40vw, 65vh, 434px) / 9);
 
 $sudoku-border-cell: 1px;
 $sudoku-border-box: 3px;
@@ -54,6 +62,11 @@ $spaceamounts: (1, 2, 3, 4, 5);
     margin: #{$space}rem 0;
   }
 
+  // Horizontal margin
+  .mx-#{$space} {
+    margin: 0 #{$space}rem;
+  }
+
   .myb-#{$space} {
     margin-bottom: #{$space}rem;
   }
@@ -66,6 +79,11 @@ $spaceamounts: (1, 2, 3, 4, 5);
   // Vertical padding
   .py-#{$space} {
     padding: #{$space}rem 0;
+  }
+
+  // Horizontal padding
+  .px-#{$space} {
+    padding: 0 #{$space}rem;
   }
 }
 
@@ -91,16 +109,16 @@ $gridamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
     }
   }
 
-  @media (min-width: $mobile-width) and (max-width: $large-width) {
-    // large columns
-    .col-lg-#{$grid} {
+  @media (max-width: $mobile-width) {
+    // small columns
+    .col-sm-#{$grid} {
       grid-column: auto/span #{$grid};
     }
   }
 
-  @media (max-width: $mobile-width) {
-    // small columns
-    .col-sm-#{$grid} {
+  @media (min-width: $mobile-width) and (max-width: $large-width) {
+    // large columns
+    .col-lg-#{$grid} {
       grid-column: auto/span #{$grid};
     }
   }
@@ -111,5 +129,19 @@ $gridgaps: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
 @each $gap in $gridgaps {
   .grid-gap-#{$gap} {
     gap: #{$gap}px;
+  }
+}
+
+// multi buttons
+$buttonamounts: (2, 3, 4, 5);
+
+@each $amount in $buttonamounts {
+  $percentvalue: percentage(1 / $amount);
+  .sudoku {
+    .multi-btn {
+      &.multi-btn-#{$amount} {
+        width: $percentvalue;
+      }
+    }
   }
 }

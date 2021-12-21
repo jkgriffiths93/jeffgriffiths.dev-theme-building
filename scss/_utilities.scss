@@ -136,45 +136,58 @@
   &.btn-primary {
     @include set-background($primary-color);
     border: 1px $primary-color solid;
-    &:hover {
-      background: lighten($primary-color, 15%);
-      border: 1px lighten($primary-color, 15%) solid;
+    @media (hover: hover) {
+      &:hover {
+        background: lighten($primary-color, 15%);
+        border: 1px lighten($primary-color, 15%) solid;
+      }
     }
   }
   &.btn-dark {
     @include set-background($dark-color);
     border: 1px $dark-color solid;
-    &:hover {
-      background: lighten($dark-color, 15%);
-      border: 1px lighten($dark-color, 15%) solid;
+    @media (hover: hover) {
+      &:hover {
+        background: lighten($dark-color, 15%);
+        border: 1px lighten($dark-color, 15%) solid;
+      }
     }
   }
   &.btn-success {
     @include set-background($success-color);
     border: 1px $success-color solid;
-    &:hover {
-      background: lighten($success-color, 15%);
-      border: 1px lighten($success-color, 15%) solid;
+    @media (hover: hover) {
+      &:hover {
+        background: lighten($success-color, 15%);
+        border: 1px lighten($success-color, 15%) solid;
+      }
     }
   }
   &.btn-danger {
     @include set-background($danger-color);
     border: 1px $danger-color solid;
-    &:hover {
-      background: lighten($danger-color, 15%);
+    @media (hover: hover) {
+      &:hover {
+        background: lighten($danger-color, 15%);
+      }
     }
   }
+
   &.btn-white {
     @include set-background(#fff);
     border: 1px #333 solid;
-    &:hover {
-      background: darken(#fff, 20%);
-      color: #333;
+    @media (hover: hover) {
+      &:hover {
+        background: darken(#fff, 20%);
+        color: #333;
+      }
     }
   }
-  &:hover {
-    background: lighten($dark-color, 20%);
-    color: #fff;
+  @media (hover: hover) {
+    &:hover {
+      background: lighten($dark-color, 20%);
+      color: #fff;
+    }
   }
 }
 

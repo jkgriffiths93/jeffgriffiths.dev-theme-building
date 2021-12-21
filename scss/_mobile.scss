@@ -22,8 +22,10 @@
 
   // Navbar
   .navbar {
-    display: block;
-    text-align: center;
+    .nav-content {
+      display: block;
+      text-align: center;
+    }
   }
 
   ul {
@@ -44,7 +46,7 @@
 
     .learn-more-button {
       // display: block;
-      width: 50%;
+      width: 100%;
       margin-bottom: 0.2rem;
     }
   }
@@ -52,7 +54,11 @@
   // About page
   .about-page {
     img {
-      width: 50%;
+      width: 75%;
+    }
+
+    .about-img-container {
+      margin-bottom: 1rem;
     }
 
     .dark-title {
@@ -61,8 +67,8 @@
     }
 
     .dark-description {
-      grid-row-start: 2;
-      grid-row-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 3;
     }
   }
 
@@ -110,6 +116,38 @@
   .resume-page {
     .resume-list-item {
       text-align: left;
+    }
+  }
+
+  // Project landing
+  .project-landing-page {
+    .project-card {
+      .project-card-img-container {
+        display: auto;
+        position: auto;
+      }
+
+      .img-spacer {
+        margin-top: auto;
+      }
+
+      img {
+        position: static;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        border-radius: 5px;
+      }
+
+      .project-card-description-container {
+        height: auto;
+        margin-top: 0.5rem;
+      }
+
+      .selected-tag-filter-container {
+        margin-top: 0.5rem;
+      }
     }
   }
 
@@ -161,19 +199,17 @@
     table {
       border-spacing: 0;
     }
+
     .sudoku-table {
       width: calc(min(80vw, 70vh));
       height: calc(min(80vw, 70vh));
+      font-size: $sudoku-cell-font-mobile;
+      line-height: 0;
+      // font-size: calc(10 * $sudoku-cell-font);
     }
     .bottom-number-div {
       width: 100%;
       margin-top: 0.5rem;
-    }
-    $sudoku-cell-font: 0.7rem;
-    $pencil-font-size: 0.35 * $sudoku-cell-font;
-
-    .sudoku-table {
-      font-size: $sudoku-cell-font;
     }
 
     // .sudoku-cell {
@@ -183,7 +219,9 @@
     // }
 
     .sudoku-pencil {
-      font-size: $pencil-font-size;
+      font-size: $pencil-font-size-mobile;
+      line-height: 0;
+
       // height: auto;
     }
   }
