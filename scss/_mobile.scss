@@ -104,18 +104,35 @@
       margin-bottom: 0.25rem;
     }
 
-    img {
-      padding: 1rem 0;
-      max-width: 250px;
+    .instagram-embed {
       float: none;
-      width: 80%;
+      width: 100%;
     }
   }
 
   // Resume page
   .resume-page {
+    .switch-container {
+      width: 100%;
+    }
+
     .resume-list-item {
       text-align: left;
+    }
+
+    .technical-resume {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+
+      .tr-other {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .tr-experience {
+        grid-column: 1;
+        grid-row: 2;
+      }
     }
   }
 

@@ -136,7 +136,7 @@ $gridgaps: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
 $buttonamounts: (2, 3, 4, 5);
 
 @each $amount in $buttonamounts {
-  $percentvalue: percentage(1 / $amount);
+  $percentvalue: percentage(calc(1 / $amount));
   .sudoku {
     .multi-btn {
       &.multi-btn-#{$amount} {

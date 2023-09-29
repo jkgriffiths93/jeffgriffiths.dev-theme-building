@@ -151,6 +151,7 @@ img {
 
   p {
     margin: auto;
+    text-align: justify;
   }
 
   // .section-light {
@@ -180,6 +181,10 @@ img {
     .blog-header-container {
       margin: auto;
       padding: 0 1rem;
+
+      .blog-group-header {
+        margin-bottom: 0;
+      }
     }
 
     .blog-preview {
@@ -198,15 +203,163 @@ img {
     width: 40%;
   }
 
+  .instagram-embed {
+    float: left;
+    margin-right: 10px;
+    width: 40%;
+    border: 1px solid $dark-color;
+    border-radius: 5px;
+  }
+
   p {
     // padding: 2rem 0;
     text-align: justify;
+    white-space: pre-wrap;
   }
+
+  // iframe {
+  //   height: none !important;
+  // }
 }
 
 // Resume page
 .resume-page {
-  font-family: 'Tinos', serif;
+  .business-resume {
+    font-family: 'Tinos', serif;
+
+    .resume-container {
+      padding: 3% 5%;
+    }
+  }
+
+  .technical-resume {
+    $tr-name-font: 2rem;
+    $tr-title-font: calc($tr-name-font * 2 / 3);
+    $tr-text-font: calc($tr-name-font * 5 / 12);
+    $tr-padding: 15px;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+
+    .tr-box {
+      padding: $tr-padding;
+    }
+
+    .tr-name {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .tr-other {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .tr-experience {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+
+    // .tr-left {
+    //   display: grid;
+    //   grid-template-rows: auto 1fr;
+    //   grid-gap: 0px;
+    // }
+
+    // .tr-right {
+    //   display: grid;
+    //   grid-template-rows: auto;
+    //   grid-gap: 0px;
+    // }
+
+    .tr-other {
+      border: none;
+      padding: $tr-padding $tr-padding 0px $tr-padding;
+
+      .tr-other-box {
+        padding: 0px 0px $tr-padding 0px;
+      }
+    }
+
+    .tr-eop {
+      padding: $tr-padding $tr-padding 0px $tr-padding;
+      .tr-eop-box {
+        padding: 0px 0px $tr-padding 0px;
+      }
+    }
+
+    .tr-name-box {
+      .tr-name {
+        color: $primary-color;
+        font-size: $tr-name-font;
+        font-weight: bold;
+      }
+
+      p,
+      a {
+        color: $white-color;
+        display: inline-block;
+      }
+
+      span {
+        color: $light-color;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      // span {
+      //   color:
+      // }
+    }
+
+    .tr-other {
+      a {
+        color: $dark-color;
+        display: block;
+        vertical-align: top;
+      }
+
+      // li {
+      //   vertical-align: top;
+      //   // list-style-type: none;
+      // }
+    }
+
+    .tr-title {
+      color: $primary-color;
+      font-size: $tr-title-font;
+      font-weight: bold;
+    }
+
+    p,
+    li,
+    a,
+    .icon {
+      font-size: $tr-text-font;
+    }
+
+    ul {
+      padding-left: 16px;
+
+      ul {
+        list-style-type: circle;
+        font-weight: normal;
+      }
+    }
+
+    .icon-list {
+      padding-left: 0;
+      list-style: none;
+
+      span {
+        padding: 0 4px;
+        width: $tr-name-font;
+        text-align: center;
+      }
+    }
+  }
 
   ul {
     padding-left: 2rem;
@@ -254,6 +407,10 @@ img {
     margin-bottom: 4px;
   }
 
+  .resume-text.remove-link-style {
+    display: block;
+  }
+
   .resume-list-item {
     font-size: 1rem;
     margin-bottom: 4px;
@@ -273,9 +430,12 @@ img {
     font-style: italic;
   }
 
+  .resume-underline {
+    text-decoration: underline;
+  }
+
   /* Section Styling */
   .resume-container {
-    padding: 3% 5%;
     border: solid black 1px;
     text-align: left;
   }
@@ -292,6 +452,44 @@ img {
   /* Other Resume */
   .download-resume {
     margin: 16px 0;
+  }
+
+  .switch-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .switch-container {
+    border: 1px solid $dark-color;
+    width: 33.33%;
+    display: flex;
+  }
+
+  .resume-switch {
+    margin: 0px;
+    width: 50%;
+    text-align: center;
+    padding: 5px 0px;
+  }
+
+  .resume-switch:hover {
+    background-color: $light-color;
+    color: $dark-color;
+  }
+
+  .selected-resume {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+
+  .br-switch {
+    font-family: 'Tinos', serif;
+  }
+
+  .tr-switch {
+    font-family: 'IBM Plex Sans Hebrew', sans-serif;
   }
 }
 
