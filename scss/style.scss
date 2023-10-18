@@ -502,6 +502,9 @@ img {
       @include set-background($dark-color);
       &:hover {
         background: lighten($dark-color, 5%);
+        i {
+          color: lighten($light-color, 15%);
+        }
       }
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
@@ -516,7 +519,7 @@ img {
       text-align: left;
       align-items: center;
       // margin: auto;
-      padding: 0.5rem 0;
+      // padding: 0.5rem 0;
     }
 
     i {
@@ -527,6 +530,10 @@ img {
 
     .portfolio-links-title {
       margin: 0;
+    }
+
+    p {
+      margin: 0.25rem 0 0 0;
     }
   }
 
