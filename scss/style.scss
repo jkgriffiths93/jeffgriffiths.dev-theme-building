@@ -495,6 +495,41 @@ img {
 
 // Project landing page
 .project-landing-page {
+  .portfolio-links {
+    .portfolio-links-card {
+      padding: 0.25rem 0.5rem 0.5rem;
+      text-align: left;
+      @include set-background($dark-color);
+      &:hover {
+        background: lighten($dark-color, 5%);
+      }
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+      border-radius: 5px;
+      padding: 0.9rem;
+      // margin-bottom: 0.5rem;
+    }
+
+    .portfolio-links-title-container {
+      display: flex;
+      justify-content: left;
+      text-align: left;
+      align-items: center;
+      // margin: auto;
+      padding: 0.5rem 0;
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: $light-color;
+      margin-right: 0.5rem;
+    }
+
+    .portfolio-links-title {
+      margin: 0;
+    }
+  }
+
   .tag-filter-drowpdown {
     text-align: left;
     width: 100%;
@@ -538,15 +573,54 @@ img {
   //   margin: 0.5rem 0;
   // }
 
+  .section-dark {
+    .project-card {
+      @include set-background($white-color);
+      &:hover {
+        background: lighten($white-color, 5%);
+      }
+      box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    .project-card-title {
+      color: $primary-color;
+    }
+
+    .project-card-date {
+      color: $primary-color;
+    }
+
+    .project-card-description {
+      color: $dark-color;
+    }
+  }
+
+  .section-light {
+    .project-card {
+      @include set-background($dark-color);
+      &:hover {
+        background: lighten($dark-color, 5%);
+      }
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card-title {
+      color: $white-color;
+    }
+
+    .project-card-date {
+      color: $white-color;
+    }
+
+    .project-card-description {
+      color: $light-color;
+    }
+  }
+
   .project-card {
     // margin: 0.5rem;
     padding: 0.25rem 0.5rem 0.5rem;
     text-align: center;
-    @include set-background($dark-color);
-    &:hover {
-      background: lighten($dark-color, 5%);
-    }
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
     // border: solid 1px $dark-color;
     border-radius: 5px;
